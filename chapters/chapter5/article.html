@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Class与style绑定 · GitBook</title>
+        <title>内置指令 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -208,9 +208,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.5.1" data-path="article.html">
+        <li class="chapter " data-level="1.5.1" data-path="../chapter4/article.html">
             
-                <a href="article.html">
+                <a href="../chapter4/article.html">
             
                     
                     Class与style绑定
@@ -240,9 +240,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../chapter5/article.html">
+        <li class="chapter active" data-level="1.6.1" data-path="article.html">
             
-                <a href="../chapter5/article.html">
+                <a href="article.html">
             
                     
                     内置指令
@@ -288,7 +288,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Class与style绑定</a>
+        <a href="../.." >内置指令</a>
     </h1>
 </div>
 
@@ -303,16 +303,73 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="class&#x4E0E;style&#x7ED1;&#x5B9A;">Class&#x4E0E;style&#x7ED1;&#x5B9A;</h1>
+                                <h1 id="&#x5185;&#x7F6E;&#x6307;&#x4EE4;">&#x5185;&#x7F6E;&#x6307;&#x4EE4;</h1>
 <ul>
-<li>&#x5BF9;&#x8C61;&#x8BED;&#x6CD5;</li>
-<li>&#x7ED3;&#x5408;computed</li>
-<li>&#x6570;&#x7EC4;&#x8BED;&#x6CD5;</li>
-<li>&#x7ED1;&#x5B9A;&#x5185;&#x8054;&#x6837;&#x5F0F;</li>
+<li><p>v-cloak</p>
+<ul>
+<li>&#x4E0E;display:none &#x914D;&#x5408;&#x4F7F;&#x7528;&#x3000;[v-cloak]{display:none;}</li>
+<li>&#x89E3;&#x51B3;&#x6A21;&#x677F;&#x5728;&#x7F51;&#x901F;&#x6162;&#x7684;&#x95EA;&#x52A8;&#x95EE;&#x9898;</li>
+<li>&#x5728;&#x7B80;&#x5355;&#x9879;&#x76EE;&#x4F7F;&#x7528;&#xFF0C;&#x5927;&#x9879;&#x76EE;&#x66FF;&#x4EE3;&#x54C1;</li>
+</ul>
+</li>
+<li><p>v-once</p>
+<ul>
+<li>&#x53EA;&#x6E32;&#x67D3;&#x4E00;&#x6B21;</li>
+<li>&#x4E1A;&#x52A1;&#x4E2D;&#x5F88;&#x5C11;&#x7528;&#xFF0C;&#x4F46;&#x5728;&#x4F18;&#x5316;&#x6027;&#x80FD;&#x65F6;&#x53EF;&#x7528;&#x5230;</li>
+</ul>
+</li>
+<li><p>v-for/v-else-if/v-else</p>
+<ul>
+<li>&#x6761;&#x4EF6;&#x6E32;&#x67D3;&#x6307;&#x4EE4;</li>
+<li>&#x590D;&#x7528;&#x5143;&#x7D20;&#x53EF;&#x7528;&#x5230;(&#x5143;&#x7D20;&#x52A0;&#x5165;key&#x5C5E;&#x6027;&#x5C31;&#x4E0D;&#x4F1A;&#x590D;&#x7528;&#x4E86;)</li>
+<li>&#xFF56;-for=&quot;xx in xxs&quot; &#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x3000;&#xFF56;-for=xx of xxs&quot;&quot;,&#x9ED8;&#x8BA4;&#x8FD8;&#x6709;&#x7D22;&#x5F15;index,key</li>
+<li>v-for &#x53EF;&#x4EE5;&#x5728;template&#x4E2D;&#x4F7F;&#x7528;</li>
+<li>&#xFF56;-for &#x904D;&#x5386;&#x53EF;&#x4EE5;&#x662F;&#x6570;&#x7EC4;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x5BF9;&#x8C61;</li>
+</ul>
+</li>
+<li><p>v-show/v-if</p>
+<ul>
+<li>v-show &#x4E0D;&#x80FD;&#x5728;<template>&#x4E0A;&#x4F7F;&#x7528;</template></li>
+<li>&#xFF56;-show &#x5BF9;&#x7528;&#x7684;&#x6837;&#x8272;&#x3000;display:none;</li>
+<li>v-if &#x5207;&#x6362;&#x5F00;&#x9500;&#x5927;&#xFF0C;&#x9002;&#x5408;&#x6761;&#x4EF6;&#x4E0D;&#x7ECF;&#x5E38;&#x6539;&#x7684;&#x573A;&#x666F;</li>
+<li>v-show&#x3000;&#x90FD;&#x4F1A;&#x88AB;&#x6E32;&#x67D3;,&#x9002;&#x5408;&#x9891;&#x7E41;&#x5207;&#x6362;&#x6761;&#x4EF6;</li>
+</ul>
+</li>
+<li><p>&#x6570;&#x7EC4;&#x66F4;&#x65B0;&#x5E38;&#x7528;&#x65B9;&#x6CD5;</p>
+<ul>
+<li>push()</li>
+<li>pop()</li>
+<li>shift()</li>
+<li>unshift()</li>
+<li>splice()</li>
+<li>sort()</li>
+<li>reverse()</li>
+<li>filter()</li>
+<li>concat()</li>
+<li>slice()</li>
+<li>vue &#x5185;&#x7F6E;&#x7684;set&#x4E0E;$set&#x65B9;&#x6CD5;</li>
+</ul>
+</li>
+<li><p>&#x65B9;&#x6CD5;&#x4E0E;&#x4E8B;&#x4EF6;</p>
+<ul>
+<li>@click&#xFF1D;&quot;xx()&quot; &#x540E;&#x9762;&#x7684;&#x62EC;&#x53F7;&#x53EF;&#x7701;&#x7565;</li>
+<li>&#x4FEE;&#x9970;&#x7B26;(&#x4F7F;&#x7528;:&#xFF20;click.stop=&quot;xx&quot;;&#x4FEE;&#x9970;&#x7B26;&#x53EF;&#x4E32;&#x8054;:&#xFF20;click.stop.prevent=&quot;xx&quot;)<ul>
+<li>.stop</li>
+<li>.prevent &#x63D0;&#x4EA4;&#x4E8B;&#x4EF6;&#x4E0D;&#x518D;&#x91CD;&#x8F7D;&#x9875;&#x9762;</li>
+<li>.capture&#x3000;&#x76D1;&#x542C;&#x5668;&#x6355;&#x83B7;&#x6A21;&#x5F0F;</li>
+<li>.self</li>
+<li>.once</li>
+<li>&#xFF20;keyup.13&#x3000;&#x952E;&#x76D8;&#x4E8B;&#x4EF6;</li>
+<li>.enter/.tab/.esc &#x5FEB;&#x6377;&#x4EF6;&#x4E8B;&#x4EF6;(&#x53EF;&#x4EE5;&#x7EC4;&#x5408;&#x4F7F;&#x7528;)</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <h1 id="&#x672C;&#x7AE0;&#x76F8;&#x5173;&#x4EE3;&#x7801;">&#x672C;&#x7AE0;&#x76F8;&#x5173;&#x4EE3;&#x7801;</h1>
 <ul>
-<li><a href="https://github.com/BB-Code/vuecode/tree/master/chapters/chapter4" target="_blank">chapter&#xFF14;</a></li>
+<li>&#x4EE3;&#x7801;&#x3000; <a href="https://github.com/BB-Code/vuecode/tree/master/chapters/chapter5" target="_blank">chapter5</a></li>
+<li>&#x6848;&#x4F8B;&#x3000;<a href="https://github.com/BB-Code/vuecode/tree/master/chapters/shopcar" target="_blank">&#x8D2D;&#x7269;&#x8F66;</a></li>
 </ul>
 
                                 
@@ -349,7 +406,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Class与style绑定","level":"1.5.1","depth":2,"next":{"title":"第四章","level":"1.6","depth":1,"ref":"","articles":[{"title":"内置指令","level":"1.6.1","depth":2,"path":"chapters/chapter5/article.md","ref":"chapters/chapter5/article.md","articles":[]}]},"previous":{"title":"第四章","level":"1.5","depth":1,"ref":"","articles":[{"title":"Class与style绑定","level":"1.5.1","depth":2,"path":"chapters/chapter4/article.md","ref":"chapters/chapter4/article.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapters/chapter4/article.md","mtime":"2018-07-29T13:26:26.486Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-30T15:17:51.127Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"内置指令","level":"1.6.1","depth":2,"previous":{"title":"第四章","level":"1.6","depth":1,"ref":"","articles":[{"title":"内置指令","level":"1.6.1","depth":2,"path":"chapters/chapter5/article.md","ref":"chapters/chapter5/article.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapters/chapter5/article.md","mtime":"2018-07-30T15:17:31.943Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-30T15:17:51.127Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
